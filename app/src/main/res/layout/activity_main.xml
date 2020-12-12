@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/finishTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="time of chronometer finish"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@id/checkboxContainer"
+        app:layout_constraintBottom_toTopOf="@id/stopTimeEditText"/>
+
+    <EditText
+        android:id="@+id/stopTimeEditText"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/checkboxContainer"
+        app:layout_constraintBottom_toTopOf="@id/chronometer"/>
+
+    <LinearLayout
+        android:id="@+id/checkboxContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/finishTextView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/chronometer">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="count backwards"
+            android:layout_gravity="center"
+            android:textSize="16sp"/>
+
+        <CheckBox
+            android:id="@+id/countBackwardsCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="seconds to start from"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/secondsStart"
+            android:inputType="number"
+            android:layout_width="40sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+
+    <com.example.chronometershowcase.Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/ms10Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_10_ms"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@color/cardview_shadow_start_color"
+        app:layout_constraintBottom_toTopOf="@id/applyButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/ms100Button"
+        app:layout_constraintTop_toBottomOf="@id/chronometer"/>
+
+    <Button
+        android:id="@+id/ms100Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_100_ms"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@color/cardview_shadow_start_color"
+        app:layout_constraintBottom_toTopOf="@id/applyButton"
+        app:layout_constraintLeft_toRightOf="@id/ms10Button"
+        app:layout_constraintRight_toLeftOf="@id/ms1000Button"
+        app:layout_constraintTop_toBottomOf="@id/chronometer"/>
+
+    <Button
+        android:id="@+id/ms1000Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_1000_ms"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@color/cardview_shadow_start_color"
+        app:layout_constraintBottom_toTopOf="@id/applyButton"
+        app:layout_constraintLeft_toRightOf="@id/ms100Button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chronometer"/>
+
+    <Button
+        android:id="@+id/applyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@color/cardview_shadow_start_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chronometer"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

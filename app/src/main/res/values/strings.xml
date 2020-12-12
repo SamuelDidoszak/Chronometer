@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ChronometerShowcase</string>
+    <string name="start">start</string>
+    <string name="stop">stop</string>
+    <string name="_10_ms">10 ms</string>
+    <string name="_100_ms">100 ms</string>
+    <string name="_1000_ms">1000 ms</string>
+</resources>
